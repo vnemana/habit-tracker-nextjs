@@ -1,6 +1,7 @@
 import CustomLink from "@/components/custom-link"
 import { auth } from "@/auth";
 import { SignIn } from "@/components/sign-in";
+import { SignOut } from "@/components/sign-out";
 
 export default async function Home() {
   const session = await auth();
@@ -35,8 +36,11 @@ export default async function Home() {
           </pre>
         </div>
       </div>
-      <div>
+      <div className="p-4">
         <SignIn/>
+      </div>
+      <div className="p-4">
+        <SignOut/>
       </div>
     </main>
   );
